@@ -30,6 +30,7 @@ class NewsAdapter (val articles: Array<Article>, val clickListener: (Article) ->
         fun bind(art: Article, clickListener: (Article) -> Unit) {
             itemView.title.text = art.title
             art.description?.let { itemView.description.text = art.description }
+            //neewd to add pic
             itemView.setOnClickListener { clickListener(art) }
         }
     }
