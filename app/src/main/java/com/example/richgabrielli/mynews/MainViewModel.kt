@@ -29,7 +29,6 @@ class MainViewModel : ViewModel() {
 
             val xx = moshi.adapter(News::class.java)
             var products: News? = null
-            //var xarticles: Array<Article> = null
 
             try {
                 products = xx.fromJson(result)
@@ -38,11 +37,6 @@ class MainViewModel : ViewModel() {
             }
 
             val xy = products!!.articles
-
-//            for (p in xy) {
-//                Log.i("NEWS", p.title + " | By: " + p.author + " | Description: " + p.description)
-//                //myList.add("ID: " + p.productid + "\n" + "In stock: " + p.instock + "\n" + "Price: " + p.price + "\n" + "Color: " + p.color + "\n" + "Product name: " + p.productname + "\n" + "Offer: " + p.offer + "\n")
-//            }
 
             _data.postValue(xy)
         }
