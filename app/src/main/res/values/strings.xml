@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyNews</string>
+    <string name="title">TextView</string>
+    <string name="desc">TextView</string>
+</resources>
