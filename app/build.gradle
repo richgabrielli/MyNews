@@ -46,4 +46,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1-alpha01'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1'
     implementation("com.squareup.moshi:moshi:1.8.0")
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

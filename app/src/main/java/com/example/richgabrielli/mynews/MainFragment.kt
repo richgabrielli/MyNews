@@ -49,6 +49,4 @@ class MainFragment : Fragment() {
 //        showDetailActivityIntent.putExtra(Intent.EXTRA_TEXT, partItem.id.toString())
 //        startActivity(showDetailActivityIntent)
     }
-
-
 }

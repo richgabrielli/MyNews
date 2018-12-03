@@ -10,7 +10,8 @@ data class News (
 data class Article (
     val author: String = "",
     val title: String = "",
-    val description: String = ""
+    val description: String = "",
+    val urlToImage: String=""
 ): Serializable
 
 
