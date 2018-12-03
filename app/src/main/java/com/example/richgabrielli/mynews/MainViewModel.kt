@@ -22,7 +22,7 @@ class MainViewModel : ViewModel() {
         GlobalScope.launch {
 
             val apiKey: String = BuildConfig.ApiKey
-            val result = URL("https://newsapi.org/v2/top-headlines?country=us&apiKey=$apiKey").readText()
+            val result = URL("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=$apiKey").readText()
 
             val moshi = Moshi.Builder().build()
 

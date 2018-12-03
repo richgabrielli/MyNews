@@ -1,6 +1,9 @@
 package com.example.richgabrielli.mynews
 
 
+import android.text.Html
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater
 import android.view.View
@@ -43,8 +46,18 @@ class NewsAdapter (val articles: Array<Article>, val clickListener: (Article) ->
             } else {
                 Picasso.get().load(R.drawable.ic_launcher_background).into(itemView.imageView)
             }
+            val articleLink = "<a href=\"${art.url}\">Link</a>"
 
+            val result: Spanned
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                result = Html.fromHtml(articleLink,Html.FROM_HTML_MODE_LEGACY);
+            } else {
+                @Suppress("DEPRECATION")
+                result = Html.fromHtml(articleLink);
+            }
 
+            itemView.link.text = result
+            itemView.link.setMovementMethod(LinkMovementMethod.getInstance());
             itemView.setOnClickListener { clickListener(art) }
         }
     }

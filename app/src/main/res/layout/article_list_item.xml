@@ -30,6 +30,11 @@
                     android:textSize="15sp"
                     tools:text="@string/desc"
                     android:text="@string/desc"/>
+            <TextView
+                    android:text="@string/link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/link"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
